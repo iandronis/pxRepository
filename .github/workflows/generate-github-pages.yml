@@ -6,9 +6,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  docs:
+  install_mkdocs:
     runs-on: ubuntu-latest
-
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Mkdocs
+        run: make install_mkdocs
+  generate_mkdocs:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Generate Github Pages
