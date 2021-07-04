@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Generate Github Pages
         run: |
-          make generate_docs
+          make generate_mkdocs
           git config --global user.name "github-actions[bot]"
           git add -A
           git commit -m "docs: auto generate doc files"
