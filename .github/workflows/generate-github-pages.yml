@@ -17,5 +17,7 @@ jobs:
         run: |
           pip install pipenv
           pip install mkdocs
+          mkdir -p ${{github.workspace}}/pxpxpx11
+          mkdir -p ${{ github.workspace }}/pxpxpx22
       - name: Generate Github Pages
         run: make generate_docs
