@@ -16,6 +16,6 @@ jobs:
       - name: Install packages
         run: |
           pip install pipenv
-          pipenv install --dev
+          pip install mkdocs
       - name: Generate Github Pages
         run: make generate_docs
