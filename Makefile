@@ -1,4 +1,4 @@
-.PHONY: isort black flake8 reformat
+.PHONY: generate_docs
 
 generate_docs:
     pip install mkdocs
