@@ -6,17 +6,11 @@ on:
   workflow_dispatch:
 
 jobs:
-  install_mkdocs:
+  install_generate_mkdocs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install Mkdocs
-        run: make install_mkdocs
-  generate_mkdocs:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Generate Github Pages
+      - name: Install & Generate Github Pages
         run: |
           make generate_mkdocs
           git config --global user.name "github-actions:bot"
